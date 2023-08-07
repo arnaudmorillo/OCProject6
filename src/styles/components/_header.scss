@@ -1,0 +1,30 @@
+.header {
+  width: 1240px;
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  &__logo {
+    color: $primary-color;
+    width: auto;
+  }
+  &__navbar {
+    display: flex;
+    align-items: flex-start;
+    gap: 57px;
+    &__link {
+      text-decoration: none;
+      color: $primary-color;
+      text-align: right;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142.6%;
+      &--selected {
+        text-decoration: underline;
+      }
+    }
+  }
+}
