@@ -1,0 +1,41 @@
+.banner-section {
+  width: 1240px;
+  height: 223px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 25px;
+
+  &__title {
+    height: 223px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #000;
+      opacity: 0.3;
+      mix-blend-mode: darken;
+      border-radius: 25px;
+    }
+
+    & h1 {
+      position: relative;
+      color: $white;
+      font-family: Montserrat;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 500;
+      margin: 0px;
+    }
+  }
+}

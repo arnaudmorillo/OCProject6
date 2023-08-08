@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter as Router } from 'react-router-dom'
 //import './index.css'
-import './styles/style.css'
+import './styles/css/style.css'
 
 import Routing from './router/routing'
 import Header from './components/header'
