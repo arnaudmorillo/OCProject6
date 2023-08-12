@@ -1,0 +1,17 @@
+.home-gallery {
+  box-sizing: border-box;
+  margin-top: 43px;
+  border-radius: 25px;
+  background: #f6f6f6;
+  width: 1240px;
+  flex-shrink: 0;
+  padding: 56px 50px 43px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  row-gap: 50px;
+
+  &__link {
+    text-decoration: none;
+  }
+}
