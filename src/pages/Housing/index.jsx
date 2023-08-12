@@ -6,13 +6,13 @@ import Rating from '../../components/rating'
 
 function Housing() {
   let location = useLocation()
-  const { housingData, setHousingData } = useContext(ContextData)
+  const { housingData } = useContext(ContextData)
   const [thisHousing, setThisHousing] = useState({})
 
   useEffect(() => {
     let id = location.pathname.substring(1)
     setThisHousing(housingData.find((housing) => housing.id === id))
-  }, [])
+  }, [housingData, location.pathname])
 
   return (
     <main>

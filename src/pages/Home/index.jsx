@@ -7,7 +7,7 @@ import Background from '../../assets/background-home.png'
 import HousingCard from '../../components/housingCard'
 
 function Home() {
-  const { housingData, setHousingData } = useContext(ContextData)
+  const { housingData } = useContext(ContextData)
 
   return (
     <main>

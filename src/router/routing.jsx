@@ -8,13 +8,13 @@ import Error from '../pages/Error'
 import Housing from '../pages/Housing'
 
 function Routing() {
-  const { housingData, setHousingData } = useContext(ContextData)
+  const { housingData } = useContext(ContextData)
   const [pathList, setPathList] = useState([])
   useEffect(() => {
     let list = []
     housingData.map((housing) => list.push(`/${housing.id}`))
     setPathList(list)
-  }, [])
+  }, [housingData])
 
   return (
     <Routes>
