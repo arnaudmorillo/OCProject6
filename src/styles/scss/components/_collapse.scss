@@ -4,7 +4,8 @@
     border-radius: 5px;
     background: $primary-color;
     display: flex;
-    width: 1023px;
+    max-width: 1023px;
+    width: 100%;
     padding: 10px 20px 10px 15px;
     align-items: center;
     justify-content: space-between;
@@ -36,7 +37,8 @@
 
     &__content {
       box-sizing: border-box;
-      width: 1023px;
+      max-width: 1023px;
+      width: 100%;
 
       border-radius: 10px 10px 5px 5px;
       background: var(--gray, #f6f6f6);

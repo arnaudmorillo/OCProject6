@@ -1,5 +1,4 @@
-function Rating({ thisHousing }) {
-  const rating = thisHousing.rating
+function Rating({ rating }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

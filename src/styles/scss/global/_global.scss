@@ -16,3 +16,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+main {
+  box-sizing: border-box;
+  max-width: 1278px;
+  width: 100%;
+  padding: 0px 19px;
+}

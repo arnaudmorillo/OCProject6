@@ -3,12 +3,13 @@
   margin-top: 43px;
   border-radius: 25px;
   background: #f6f6f6;
-  width: 1240px;
+  max-width: 1240px;
+  width: 100%;
   flex-shrink: 0;
-  padding: 56px 50px 43px 50px;
+  padding: 56px 20px 43px 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
+  justify-content: space-around;
   row-gap: 50px;
 
   &__link {

@@ -4,6 +4,7 @@ import { ContextData } from '../../ContextData'
 
 import Rating from '../../components/rating'
 import Collapse from '../../components/collapse'
+import SlideShow from '../../components/slideShow'
 
 function Housing() {
   let location = useLocation()
@@ -18,7 +19,8 @@ function Housing() {
   return (
     <main>
       housing {thisHousing.id}
-      <Rating thisHousing={thisHousing} />
+      <SlideShow pictures={thisHousing.pictures} />
+      <Rating rating={thisHousing.rating} />
       <Collapse title="Description" text={thisHousing.description} />
       <Collapse title="Equipments" text={thisHousing.equipments} />
     </main>
