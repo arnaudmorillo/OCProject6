@@ -9,6 +9,17 @@ function Collapse({ title, text }) {
     setOPen(!open)
   }
 
+  const collapseText =
+    text instanceof Array ? (
+      <ul className="collapse__text__content__list">
+        {text.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    ) : (
+      text
+    )
+
   const contentRef = useRef()
 
   return (
@@ -33,7 +44,7 @@ function Collapse({ title, text }) {
             : { height: '0px' }
         }
       >
-        <div className="collapse__text__content">{text}</div>
+        <div className="collapse__text__content">{collapseText}</div>
       </div>
     </article>
   )

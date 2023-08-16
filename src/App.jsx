@@ -8,6 +8,7 @@ import { ContextData } from './ContextData'
 
 function App() {
   const [housingData, setHousingData] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     fetch('data.json')
@@ -16,13 +17,14 @@ function App() {
       })
       .then((data) => {
         setHousingData(data)
+        setIsLoading(false)
       })
       .catch((err) => {
         console.log(err)
       })
   }, [])
 
-  if (!housingData) return <div>loading...</div>
+  if (isLoading) return <div>loading...</div>
 
   return (
     <ContextData.Provider value={{ housingData, setHousingData }}>

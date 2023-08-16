@@ -1,6 +1,4 @@
 import { Routes, Route } from 'react-router-dom'
-import { useContext, useEffect, useState } from 'react'
-import { ContextData } from '../ContextData'
 
 import Home from '../pages/Home'
 import APropos from '../pages/A-propos'
@@ -8,21 +6,16 @@ import Error from '../pages/Error'
 import Housing from '../pages/Housing'
 
 function Routing() {
-  const { housingData } = useContext(ContextData)
-  const [pathList, setPathList] = useState([])
-  useEffect(() => {
-    let list = []
-    housingData.map((housing) => list.push(`/logements/${housing.id}`))
-    setPathList(list)
-  }, [housingData])
-
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/a-propos" element={<APropos />} />
-      {pathList.map((path, index) => {
-        return <Route path={path} element={<Housing />} key={index} />
-      })}
+      <Route
+        path={`/logements/:id`}
+        element={<Housing />}
+        errorElement={<Error />}
+      />
+      <Route path="/404" element={<Error />} />
       <Route path="*" element={<Error />} />
     </Routes>
   )

@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import { useContext, useState, useEffect } from 'react'
 import { ContextData } from '../../ContextData'
 
@@ -9,16 +9,15 @@ import Host from '../../components/host'
 import Tags from '../../components/tags'
 
 function Housing() {
-  let location = useLocation()
   const { housingData } = useContext(ContextData)
   const [thisHousing, setThisHousing] = useState({})
+  const { id } = useParams()
 
   useEffect(() => {
-    let id = location.pathname.substring(11)
     setThisHousing(housingData.find((housing) => housing.id === id))
-  }, [housingData, location.pathname])
+  }, [housingData, id])
 
-  if (thisHousing === {}) return <div>loading...</div>
+  if (!thisHousing) return <Navigate to="/404" />
 
   return (
     <main className="housing">

@@ -1,10 +1,10 @@
-function Host(host) {
-  if (!host.host) return <div>loading...</div>
+function Host({ host }) {
+  if (!host) return <div>loading...</div>
 
   return (
     <div className="host">
-      <p>{host.host.name}</p>
-      <img src={host.host.picture} alt="Host" />
+      <p>{host.name}</p>
+      <img src={host.picture} alt="Host" />
     </div>
   )
 }
