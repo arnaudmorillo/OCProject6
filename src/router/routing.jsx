@@ -12,7 +12,7 @@ function Routing() {
   const [pathList, setPathList] = useState([])
   useEffect(() => {
     let list = []
-    housingData.map((housing) => list.push(`/${housing.id}`))
+    housingData.map((housing) => list.push(`/logements/${housing.id}`))
     setPathList(list)
   }, [housingData])
 

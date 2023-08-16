@@ -18,7 +18,7 @@ function Home() {
       <section className="home-gallery">
         {housingData.map((housing) => (
           <Link
-            to={'/' + housing.id}
+            to={'/logements/' + housing.id}
             className="home-gallery__link"
             key={housing.id}
           >

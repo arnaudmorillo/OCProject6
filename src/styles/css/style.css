@@ -151,6 +151,9 @@ main {
   line-height: 142.6%;
 }
 
+.collapse {
+  flex: 1 1 0px;
+}
 .collapse__title {
   box-sizing: border-box;
   border-radius: 5px;
@@ -202,6 +205,107 @@ main {
   line-height: 142.6%;
 }
 
+.slider {
+  position: relative;
+  height: 415px;
+  max-width: 1278px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 19px;
+  overflow: hidden;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+.slider__left-arrow {
+  position: absolute;
+  top: calc(50% - 40px);
+  left: 25px;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+.slider__right-arrow {
+  position: absolute;
+  top: calc(50% - 40px);
+  right: 25px;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+.slider__number {
+  position: absolute;
+  left: calc(50% - 11px);
+  bottom: 25px;
+  z-index: 10;
+  color: white;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.slider__slide {
+  opacity: 0.3;
+  transition-duration: 1s ease;
+  transform: scale(0.9);
+}
+.slider__slide--active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1);
+}
+.slider__slide__image {
+  height: 415px;
+  max-width: 1240px;
+  width: 1240px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+}
+.tags__tag {
+  border-radius: 10px;
+  background: #ff6060;
+  width: 115px;
+  height: 25px;
+  flex-shrink: 0;
+  color: white;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.host {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.host p {
+  word-spacing: 0px;
+  width: min-content;
+  margin: 0px;
+  text-align: right;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+}
+.host img {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 32px;
+}
+
 .home-gallery {
   box-sizing: border-box;
   margin-top: 43px;
@@ -231,6 +335,48 @@ main {
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
+}
+
+.housing {
+  color: #ff6060;
+}
+.housing__info {
+  margin-top: 30px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.housing__info__location {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.housing__info__location__title h1 {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+  margin: 0px;
+}
+.housing__info__location__title p {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+  margin: 0px;
+}
+.housing__info__host {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  align-items: end;
+}
+.housing__details {
+  display: flex;
+  gap: 76px;
 }
 
 .error {

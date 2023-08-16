@@ -1,5 +1,8 @@
 import { useState } from 'react'
 
+import arrowLeft from '../assets/arrow-left.png'
+import arrowRight from '../assets/arrow-right.png'
+
 function SlideShow({ pictures }) {
   const [current, setCurrent] = useState(0)
 
@@ -17,12 +20,19 @@ function SlideShow({ pictures }) {
 
   return (
     <section className="slider">
-      <div className="slider__left-arrow" onClick={prevSlide}>
-        -1
-      </div>
-      <div className="slider__right-arrow" onClick={nextSlide}>
-        +1
-      </div>
+      {length > 1 && (
+        <div>
+          <div className="slider__left-arrow" onClick={prevSlide}>
+            <img src={arrowLeft} alt="Go to previous" />
+          </div>
+          <div className="slider__right-arrow" onClick={nextSlide}>
+            <img src={arrowRight} alt="Go to next" />
+          </div>
+          <div className="slider__number">
+            {current + 1}/{length}
+          </div>
+        </div>
+      )}
       {pictures.map((slide, index) => {
         return (
           <div
