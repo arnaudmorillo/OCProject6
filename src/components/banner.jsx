@@ -4,7 +4,7 @@ function Banner({ backgroundImageUrl, title }) {
   const [titleLayout, setTitleLayout] = useState(title)
 
   useEffect(() => {
-    if (title === null) {
+    if (title !== undefined) {
       if (window.innerWidth <= 700 && title.indexOf(',') > -1) {
         let titleArray = title.split(',')
         titleArray[0] = titleArray[0] + ','
