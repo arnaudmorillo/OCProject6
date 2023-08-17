@@ -15,7 +15,6 @@ function Routing() {
         element={<Housing />}
         errorElement={<Error />}
       />
-      <Route path="/404" element={<Error />} />
       <Route path="*" element={<Error />} />
     </Routes>
   )

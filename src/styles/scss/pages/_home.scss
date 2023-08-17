@@ -12,6 +12,14 @@
   justify-content: space-around;
   row-gap: 50px;
 
+  @media (max-width: $mobile-breakpoint) {
+    background: none;
+    padding: 0px;
+    margin-top: 22px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   &__link {
     text-decoration: none;
   }

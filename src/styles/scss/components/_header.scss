@@ -3,19 +3,30 @@
   max-width: 1278px;
   width: 100%;
   padding: 0px 19px;
-  height: 68px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: auto;
+
   &__logo {
+    height: 68px;
     color: $primary-color;
     width: auto;
+
+    @media (max-width: $mobile-breakpoint) {
+      height: 46.9px;
+    }
   }
+
   &__navbar {
     display: flex;
     align-items: flex-start;
     gap: 57px;
+
+    @media (max-width: $mobile-breakpoint) {
+      gap: 26px;
+    }
+
     &__link {
       text-decoration: none;
       color: $primary-color;
@@ -25,6 +36,12 @@
       font-style: normal;
       font-weight: 500;
       line-height: 142.6%;
+
+      @media (max-width: $mobile-breakpoint) {
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
       &--selected {
         text-decoration: underline;
       }

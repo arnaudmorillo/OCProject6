@@ -17,7 +17,7 @@ function Housing() {
     setThisHousing(housingData.find((housing) => housing.id === id))
   }, [housingData, id])
 
-  if (!thisHousing) return <Navigate to="/404" />
+  if (!thisHousing) return <Navigate to="*" />
 
   return (
     <main className="housing">

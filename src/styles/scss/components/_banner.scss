@@ -8,12 +8,23 @@
   background-position: center;
   border-radius: 25px;
 
+  @media (max-width: $mobile-breakpoint) {
+    height: 111px;
+    border-radius: 10px;
+  }
+
   &__title {
     height: 223px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: $mobile-breakpoint) {
+      height: 111px;
+      justify-content: start;
+      padding-left: 16px;
+    }
 
     &::before {
       content: '';
@@ -26,6 +37,10 @@
       opacity: 0.3;
       mix-blend-mode: darken;
       border-radius: 25px;
+
+      @media (max-width: $mobile-breakpoint) {
+        border-radius: 10px;
+      }
     }
 
     & h1 {
@@ -36,6 +51,13 @@
       font-style: normal;
       font-weight: 500;
       margin: 0px;
+      & span {
+        display: block;
+      }
+
+      @media (max-width: $mobile-breakpoint) {
+        font-size: 24px;
+      }
     }
   }
 }
