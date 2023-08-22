@@ -10,16 +10,16 @@ function Home() {
   const { housingData } = useContext(ContextData)
 
   return (
-    <main>
+    <main className="home">
       <Banner
         backgroundImageUrl={Background}
         title={'Chez vous, partout et ailleurs'}
       />
-      <section className="home-gallery">
+      <section className="home__gallery">
         {housingData.map((housing) => (
           <Link
             to={'/logements/' + housing.id}
-            className="home-gallery__link"
+            className="home__gallery__link"
             key={housing.id}
           >
             <HousingCard

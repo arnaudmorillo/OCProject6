@@ -2,6 +2,7 @@
   display: flex;
   gap: 10px;
   align-items: center;
+
   & p {
     word-spacing: 0px;
     width: min-content;
@@ -12,11 +13,22 @@
     font-style: normal;
     font-weight: 500;
     line-height: 142.6%;
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 12px;
+    }
   }
+
   & img {
     width: 64px;
     height: 64px;
     flex-shrink: 0;
     border-radius: 32px;
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 12px;
+      width: 32px;
+      height: 32px;
+    }
   }
 }

@@ -17,5 +17,12 @@
     font-style: normal;
     font-weight: 500;
     line-height: 25px;
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 10px;
+      width: 84px;
+      height: 18px;
+      line-height: 18px;
+    }
   }
 }

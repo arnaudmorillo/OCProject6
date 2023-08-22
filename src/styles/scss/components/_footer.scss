@@ -9,6 +9,11 @@
   align-items: center;
   gap: 28.556px;
   color: $white;
+
+  @media (max-width: $mobile-breakpoint) {
+    gap: 12px;
+  }
+
   &__logo {
     height: 39.444px;
     width: auto;
@@ -22,5 +27,11 @@
     line-height: 142.6%;
     margin-top: 0px;
     margin-bottom: 29px;
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 12px;
+      margin-bottom: 58px;
+      width: 133px;
+    }
   }
 }
