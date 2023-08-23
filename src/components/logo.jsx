@@ -1,4 +1,5 @@
 function Logo({ className }) {
+  // fill has been set to current color to modify the colour with CSS
   return (
     <svg
       className={className}

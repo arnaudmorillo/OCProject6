@@ -10,11 +10,7 @@ function Routing() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/a-propos" element={<APropos />} />
-      <Route
-        path={`/logements/:id`}
-        element={<Housing />}
-        errorElement={<Error />}
-      />
+      <Route path={`/logements/:id`} element={<Housing />} />
       <Route path="*" element={<Error />} />
     </Routes>
   )

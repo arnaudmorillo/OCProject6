@@ -3,6 +3,7 @@ import Logo from './logo'
 import { useLocation } from 'react-router-dom'
 
 function Header() {
+  // this allows to handle different layout depending on the path
   let location = useLocation()
 
   return (

@@ -1,4 +1,5 @@
 function Rating({ rating }) {
+  // fill uses the rating prop to defne the color of the stars
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

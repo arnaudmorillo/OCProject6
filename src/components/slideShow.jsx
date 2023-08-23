@@ -10,10 +10,12 @@ function SlideShow({ pictures }) {
 
   const length = pictures.length
 
+  // handles the click to view next picture
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1)
   }
 
+  // handles the click to view previous picture
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1)
   }

@@ -10,6 +10,7 @@ function App() {
   const [housingData, setHousingData] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
 
+  // fetching data from json file
   useEffect(() => {
     fetch('data.json')
       .then((response) => {

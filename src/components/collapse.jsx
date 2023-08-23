@@ -5,10 +5,12 @@ import CollapseArrow from './collapseArrow'
 function Collapse({ title, text }) {
   const [open, setOPen] = useState(false)
 
+  // Handles opening and closing of collapse
   const toggle = () => {
     setOPen(!open)
   }
 
+  // if the content of collapse is an array, display as a list
   const collapseText =
     text instanceof Array ? (
       <ul className="collapse__text__content__list">

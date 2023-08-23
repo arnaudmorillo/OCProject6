@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 function Banner({ backgroundImageUrl, title }) {
   const [titleLayout, setTitleLayout] = useState(title)
 
+  // Split the string at commas to break line
   useEffect(() => {
     if (title !== undefined && title.indexOf(',') > -1) {
       let titleArray = title.split(',')

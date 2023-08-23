@@ -13,10 +13,12 @@ function Housing() {
   const [thisHousing, setThisHousing] = useState({})
   const { id } = useParams()
 
+  // Looking for a match between the id in url and the database
   useEffect(() => {
     setThisHousing(housingData.find((housing) => housing.id === id))
   }, [housingData, id])
 
+  // if the id is not in database, redirect to 404
   if (!thisHousing) return <Navigate to="*" />
 
   return (
